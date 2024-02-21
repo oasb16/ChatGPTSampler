@@ -1,0 +1,9 @@
+openai
+PyQt5
+openai-whisper
+sounddevice 
+numpy
+scipy
+boto3
+
+# aws configure
