@@ -2,21 +2,21 @@
 
 ## Aim : To create Multiverses of topics, and sell as data packages for Models
 
-### This project samples topics from OpenAPI
-### API Request derives 'n' questions, stored with relevant answers and keywords for given topic
-### Response is stored in JSON Format in files to be traveresed
+* This project samples topics from OpenAPI
+* API Request derives 'n' questions, stored with relevant answers and keywords for given topic
+* Response is stored in JSON Format in files to be traveresed
 
 
 ## Setup
 
 ### API KEY
-#### Create api key here : https://platform.openai.com/api-keys
-#### Use this key to store in env variable (MacOS) : export OPENAI_API_KEY="_keyhere_"
+* Create api key here : https://platform.openai.com/api-keys
+* Use this key to store in env variable (MacOS) : export OPENAI_API_KEY="_keyhere_"
 
 ### CODE
-#### Fork this : git clone https://github.com/oasb16/ChatGPTSampler.git
-#### Go to directory and install dependecies : pip3 install -r requirements.txt
-#### Run the program : python3 Iterations1.py
+* Fork this : git clone https://github.com/oasb16/ChatGPTSampler.git
+* Go to directory and install dependecies : pip3 install -r requirements.txt
+* Run the program : python3 Iterations1.py
 
 
 ## Initial Interface
