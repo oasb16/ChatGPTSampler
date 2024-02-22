@@ -6,6 +6,7 @@
 ### API Request derives 'n' questions, stored with relevant answers and keywords for given topic
 ### Response is stored in JSON Format in files to be traveresed
 
+
 ## Setup
 
 ### API KEY
@@ -27,3 +28,14 @@
 ### Research APIs to optimize usage
 ### Add more improvements
 
+## Initial Interface
+![Screenshot 2024-02-21 at 5 10 33 PM](https://github.com/oasb16/ChatGPTSampler/assets/160087863/e7d1f7e8-1862-4e44-b420-f8c4c170d21a)
+
+
+## Storage
+#### Responses:
+![Screenshot 2024-02-21 at 5 10 41 PM](https://github.com/oasb16/ChatGPTSampler/assets/160087863/d86c0040-0425-45b5-a52f-6f4bfa51f032)
+#### Questions:
+![Screenshot 2024-02-21 at 5 10 48 PM](https://github.com/oasb16/ChatGPTSampler/assets/160087863/5b13a973-99bb-44b7-89fb-c83ecc146c78)
+#### Keywords:
+![Screenshot 2024-02-21 at 5 10 59 PM](https://github.com/oasb16/ChatGPTSampler/assets/160087863/dff3000b-f5c8-4cf6-a0e4-d0cbf62f21c7)
