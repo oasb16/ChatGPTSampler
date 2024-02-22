@@ -19,15 +19,6 @@
 #### Run the program : python3 Iterations1.py
 
 
-## Improvements:
-### Remove Redundancy in Questions and topics
-### Better up Prompt to garner max optimal information in each request
-### Reduce Performace Speed
-### Create host for this: Web App, GPT, Assistant
-### Better Storage strategies
-### Research APIs to optimize usage
-### Add more improvements
-
 ## Initial Interface
 ![Screenshot 2024-02-21 at 5 10 33 PM](https://github.com/oasb16/ChatGPTSampler/assets/160087863/e7d1f7e8-1862-4e44-b420-f8c4c170d21a)
 
@@ -39,3 +30,13 @@
 ![Screenshot 2024-02-21 at 5 10 48 PM](https://github.com/oasb16/ChatGPTSampler/assets/160087863/5b13a973-99bb-44b7-89fb-c83ecc146c78)
 #### Keywords:
 ![Screenshot 2024-02-21 at 5 10 59 PM](https://github.com/oasb16/ChatGPTSampler/assets/160087863/dff3000b-f5c8-4cf6-a0e4-d0cbf62f21c7)
+
+
+## Improvements:
+* Remove Redundancy in Questions and topics
+* Better up Prompt to garner max optimal information in each request
+* Reduce Performace Speed
+* Create host for this: Web App, GPT, Assistant
+* Better Storage strategies
+* Research APIs to optimize usage
+* Add more improvements
