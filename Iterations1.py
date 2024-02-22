@@ -1,10 +1,10 @@
-import sys
+import sys, os
 import json
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLineEdit, QPushButton, QTextEdit, QMessageBox
 from openai import OpenAI
 
-# Initialize OpenAI API key
-client = OpenAI(api_key="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")
+api_key = os.environ['api_key']
+client = OpenAI(api_key=api_key)
 
 class QuestionGeneratorApp(QWidget):
     def __init__(self):
@@ -49,14 +49,11 @@ class QuestionGeneratorApp(QWidget):
         current_topic = topic
         for i in range(iteration):
             QAK = self.fetch10QuestionsAnswersKeyword(current_topic)
-            print(f" \nQAK : \n{QAK} \n\n and len(QAK) : {len(QAK)}\n ")
             if len(QAK) == 3:
+
                 questions, answers, keywords = QAK
                 self.all_questions.extend(questions)
                 self.all_keywords.extend(keywords)
-
-            # if not QAK:
-            #     questions, answers, keywords =  i for i in QAK
 
             self.questionsArea.setText(f"Iteration {i+1}: Completed\nQuestions Generated: {len(self.all_questions)}\nKeywords Identified: {len(self.all_keywords)}\nTotal Responses: {len(self.all_responses)}")
 
@@ -83,7 +80,6 @@ class QuestionGeneratorApp(QWidget):
             )
             response = response.choices[0].message.content.strip().split('\n')
             response_json = json.loads(''.join(response))
-            print(f"Response JSON list lenght: {response_json}\n\nLength of response:{len(response_json)}")
 
             questions = []
             answers = []
@@ -104,7 +100,8 @@ class QuestionGeneratorApp(QWidget):
             
             self.all_responses.extend(responses)
 
-            # print(f"\nquestions: {questions}\n, \nanswers: {answers}\n, \nkeywords: {keywords}\n")
+            # print(f"\nquestions: {questions}\n \nanswers: {answers}\n \nkeywords: {keywords}\n")
+            print(f"\nresponses : \n{json.dumps(responses, indent=4)}\n\n")
             return [questions, answers, keywords]
         except Exception as e:
             return [f"Failed to fetch questions: {str(e)}"]
@@ -115,15 +112,15 @@ class QuestionGeneratorApp(QWidget):
 
     def storeData(self):
         # Simplified: Store questions and keywords in a JSON file
-        with open('questions_and_keywords.json', 'w') as f:
+        with open('iteration_1_questions_and_keywords.json', 'w') as f:
             json.dump({'questions': self.all_questions, 'keywords': self.all_keywords}, f, indent=4)
-        self.questionsArea.append("\nData stored in 'questions_and_keywords.json'.")
+        self.questionsArea.append("\nData stored in 'iteration_1_questions_and_keywords.json'.")
 
     def storeResponse(self):
         # Simplified: Store questions and keywords in a JSON file
-        with open('all_responses.json', 'w') as f:
+        with open('iteration_1_all_responses.json', 'w') as f:
             json.dump({'responses': self.all_responses}, f, indent=4)
-        self.questionsArea.append("\nData stored in 'all_responses.json'.")
+        self.questionsArea.append("\nData stored in 'iteration_1_all_responses.json'.")
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
