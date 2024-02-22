@@ -1,9 +1,9 @@
-import sys
+import sys, os
 from openai import OpenAI
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLineEdit, QPushButton, QTextEdit
 
 # Initialize OpenAI API key
-client = OpenAI(api_key="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")
+api_key = os.getenv("OPENAI_API_KEY")
 
 class QuestionGeneratorApp(QWidget):
     def __init__(self):
